@@ -1,0 +1,9 @@
+*.log
+*.pdf
+*.gz
+*.aux
+*.auxlock
+*.dat
+*.dep
+*.md5
+*.dpth

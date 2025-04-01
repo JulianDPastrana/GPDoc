@@ -1,0 +1,21 @@
+[project]
+name = "gpdoc"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "JulianDPastrana",email = "j.pastrana@utp.edu.co"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "torch (>=2.6.0,<3.0.0)",
+    "gpytorch (>=1.14,<2.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "matplotlib (>=3.10.1,<4.0.0)",
+    "tqdm (>=4.67.1,<5.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

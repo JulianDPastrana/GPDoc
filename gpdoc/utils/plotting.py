@@ -15,7 +15,7 @@ def plot_multi_task_predictions(train_x, train_y, test_x, mean, lower, upper, ti
     - title_prefix: Prefix for subplot titles (default: "Task")
     """
     n_tasks = mean.shape[1]
-    grid_size = math.ceil(np.sqrt(n_tasks))
+    grid_size = np.ceil(np.sqrt(n_tasks)).astype(int)
 
     fig, axs = plt.subplots(grid_size, grid_size, figsize=(4 * grid_size, 3 * grid_size))
     axs = axs.flatten()
@@ -36,5 +36,4 @@ def plot_multi_task_predictions(train_x, train_y, test_x, mean, lower, upper, ti
         fig.delaxes(axs[i])
 
     fig.tight_layout()
-    plt.show()
 

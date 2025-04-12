@@ -147,9 +147,6 @@ for i in epochs_iter:
 model.eval()
 likelihood.eval()
 
-# Initialize plots
-fig, axs = plt.subplots(1, num_tasks, figsize=(4 * num_tasks, 3))
-
 # Make predictions
 with torch.no_grad(), gpy.settings.fast_pred_var():
     test_x = torch.linspace(0, 1, 51)
@@ -158,4 +155,4 @@ with torch.no_grad(), gpy.settings.fast_pred_var():
     lower, upper = predictions.confidence_region()
 
 plot_multi_task_predictions(train_x, train_y, test_x, mean, lower, upper)
-
+plt.show()
